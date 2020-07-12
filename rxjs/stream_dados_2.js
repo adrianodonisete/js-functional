@@ -1,35 +1,35 @@
 function gerarElementos(array) {
     return {
         iniciar(fn) {
-            let indice = 0
+            let indice = 0;
             const i = setInterval(() => {
                 if(indice >= array.length) {
-                    clearInterval(i)
+                    clearInterval(i);
                 } else {
-                    fn(array[indice])
-                    indice++
+                    fn(array[indice]);
+                    indice++;
                 }
-            }, 1000)
+            }, 1000);
 
             return {
                 parar() {
-                    clearInterval(i)
+                    clearInterval(i);
                 }
-            }
+            };
         }
-    }
+    };
 }
 
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const temp1 = gerarElementos(numeros)
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const temp1 = gerarElementos(numeros);
 
 const exec1 = temp1.iniciar(num => {
-    console.log(Math.pow(2, num))
+    console.log(Math.pow(2, num));
 })
 
 setTimeout(() => {
-    exec1.parar()
-}, 4000)
+    exec1.parar();
+}, 10000);
 
 
 gerarElementos([
@@ -37,4 +37,4 @@ gerarElementos([
     ['Daniel', 'Bruno', 'Julia'],
     [1, 2, 3, 4, 5],
 ])
-    .iniciar(console.log)
+    .iniciar(console.log);

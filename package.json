@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.15",
+    "puppeteer": "^4.0.1",
     "rxjs": "^6.5.5",
     "xmlhttprequest": "^1.8.0"
   }

@@ -1,14 +1,14 @@
 function funcionarOuNao(valor, chanceErro) {
     return new Promise((resolve, reject) => {
         try {
-            con.log('temp')
+            con.log('temp');
             if(Math.random() < chanceErro) {
-                reject('Ocorreu um erro!')
+                reject('Ocorreu um erro!');
             } else {
-                resolve(valor)
+                resolve(valor);
             }
         } catch(e) {
-            reject(e)
+            reject(e);
         }
     })
 }
@@ -21,4 +21,4 @@ funcionarOuNao('Testando...', 0.5)
     )
     .then(() => console.log('Quase Fim!'))
     .catch(err => console.log(`Erro Geral: ${err}`))
-    .then(() => console.log('Fim!'))
+    .then(() => console.log('Fim!'));

@@ -1,0 +1,2 @@
+ctrl+alt+n pra rodar o js
+ctrl+alt+m pra parar o js

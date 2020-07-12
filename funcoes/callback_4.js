@@ -6,29 +6,36 @@ const carrinho = [
     { nome: 'Tesoura', qtde: 1, preco: 19.20 },
 ]
 
-const getNome = item => item.nome
-const qtdeMaiorQueZero = item => item.qtde > 0
+const getNome = item => item.nome;
+const qtdeMaiorQueZero = item => item.qtde > 0;
 // const qtdeMaiorIgualAZero = item => item.qtde >= 0
 // const qtdeMuitoGrande = item => item.qtde >= 1000
 
 const nomeItensValido = carrinho
     .filter(qtdeMaiorQueZero)
-    .map(getNome)
+    .map(getNome);
 
-console.log(nomeItensValido)
+console.log(nomeItensValido);
+
+
+
+
 
 Array.prototype.meuFilter = function(fn) {
-    const novoArray = []
+    const novoArray = [];
     for(let i = 0; i < this.length; i++) {
         if(fn(this[i], i, this)) {
-            novoArray.push(this[i])
+            novoArray.push(this[i]);
         }
     }
-    return novoArray
+    return novoArray;
 }
 
 const nomeItensValido2 = carrinho
     .meuFilter(qtdeMaiorQueZero)
-    .map(getNome)
+    .map(getNome);
 
-console.log(nomeItensValido2)
+console.log(nomeItensValido2);
+
+
+

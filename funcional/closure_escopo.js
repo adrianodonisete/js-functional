@@ -1,12 +1,12 @@
 
-const x = 3
+const x = 3;
 
 function fora() {
-    const x = 97
+    const x = 97;
     function somarXMais3() {
-        return x + 3
+        return x + 3;
     }
-    return somarXMais3
+    return somarXMais3;
 }
 
-module.exports = fora()
+module.exports = fora();

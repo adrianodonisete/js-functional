@@ -1,4 +1,4 @@
-const { from, Observable } = require('rxjs')
+const { from, Observable } = require('rxjs');
 
 
 function primeiro() {
@@ -6,11 +6,11 @@ function primeiro() {
         return Observable.create(subscriber => {
             source.subscribe({
                 next(v) {
-                    subscriber.next(v)
-                    subscriber.complete()
+                    subscriber.next(v);
+                    subscriber.complete();
                 }
-            })
-        })
+            });
+        });
     }
 }
 
@@ -19,10 +19,10 @@ function nenhum() {
         return Observable.create(subscriber => {
             source.subscribe({
                 next(v) {
-                    subscriber.complete()
+                    subscriber.complete();
                 }
-            })
-        })
+            });
+        });
     }
 }
 
@@ -33,16 +33,16 @@ function ultimo() {
             let ultimo
             source.subscribe({
                 next(v) {
-                    ultimo = v
+                    ultimo = v;
                 },
                 complete() {
                     if(ultimo !== undefined) {
-                        subscriber.next(ultimo)
+                        subscriber.next(ultimo);
                     }
-                    subscriber.complete()
+                    subscriber.complete();
                 }
-            })
-        })
+            });
+        });
     }
 }
 
@@ -52,4 +52,4 @@ from([1, 2, 3, 4, 5])
         // nenhum(),
         ultimo()
     )
-    .subscribe(console.log)
+    .subscribe(console.log);

@@ -1,17 +1,17 @@
-const { Observable } = require('rxjs')
+const { Observable } = require('rxjs');
 
 const obs = Observable.create(subscriber => {
-    subscriber.next('RxJS')
-    subscriber.next('é')
-    subscriber.next('bem')
-    subscriber.next('poderoso!')
+    subscriber.next('RxJS');
+    subscriber.next('é');
+    subscriber.next('bem');
+    subscriber.next('poderoso!');
 
     if(Math.random() > 0.5) {
-        subscriber.complete()
+        subscriber.complete();
     } else {
-        subscriber.error('Que problema?!?')
+        subscriber.error('Que problema?!?');
     }
-})
+});
 
 // obs.subscribe(
 //     valor => console.log(`Valor: ${valor}`),
@@ -21,12 +21,13 @@ const obs = Observable.create(subscriber => {
 
 obs.subscribe({
     next(valor) {
-        console.log(`Valor: ${valor}`)
+        console.log(`Valor: ${valor}`);
     },
     complete() {
-        console.log('Fim!')
+        console.log('Fim!');
     },
     error(msg) {
-        console.log(`Erro: ${msg}`)
+        console.log(`Erro: ${msg}`);
     }
-})
+});
+

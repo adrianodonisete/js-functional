@@ -8,6 +8,10 @@ function gerarNumeroAleatorio(min, max) {
     return parseInt(Math.random() * fator) + min
 }
 
+
+console.log(Math.random());
+console.log(parseInt(Math.random() * 100));
+
 console.log(gerarNumeroAleatorio(1, 10000))
 console.log(gerarNumeroAleatorio(1, 10000))
 console.log(gerarNumeroAleatorio(1, 10000))

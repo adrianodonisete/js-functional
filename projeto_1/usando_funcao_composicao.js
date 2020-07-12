@@ -1,13 +1,13 @@
-const path = require('path')
-const fn = require('./funcoes')
+const path = require('path');
+const fn = require('./funcoes');
 
-const caminho = path.join(__dirname, '..', 'dados', 'legendas')
+const caminho = path.join(__dirname, '..', 'dados', 'legendas');
 
 const simbolos = [
     '.', '?', '-', ',', '"', '♪',
     '_', '<i>', '</i>', '\r', '[', ']',
     '(', ')'
-]
+];
 
 const palavrasMaisUsadas = fn.composicao(
     fn.lerDiretorio,
@@ -25,7 +25,7 @@ const palavrasMaisUsadas = fn.composicao(
     fn.removerElementosSeApenasNumero,
     fn.agruparElementos,
     fn.ordernarPorAtribNumerico('qtde', 'desc'),
-)
+);
 
 palavrasMaisUsadas(caminho)
-    .then(console.log)
+    .then(console.log);

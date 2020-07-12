@@ -3,12 +3,15 @@ const letrasAninhadas = [
     [' '],
     ['m', ['u', ['n']], 'd', 'o'],
     ['!', '!', '!', '!']
-]
+];
 
-const letras = letrasAninhadas.flat(Infinity)
+const letras = letrasAninhadas.flat(Infinity);
 
 const resultado = letras
     .flatMap(l => [l, ','])
-    .reduce((a, b) => a + b)
+    .reduce((a, b) => a + b);
 
-console.log(resultado)
+console.log(resultado);
+
+
+// console.log(Infinity !== NaN);

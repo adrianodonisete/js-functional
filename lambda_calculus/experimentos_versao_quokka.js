@@ -55,6 +55,7 @@ const NOT = a => a(F)(T)
 r = NOT(F)
 r
 
+
 // AND
 const AND = a => b => a(b)(F)
 
@@ -85,3 +86,4 @@ const XOR = a => b => NOT(EQ(a)(b))
 
 r = XOR(F)(T)
 r
+

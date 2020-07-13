@@ -30,7 +30,6 @@ ULT2(13)(20).log();
 // boolean TRUE e FALSE
 // TRUE ? <PRI> : ULT
 // FALSE ? PRI : <ULT>
-
 const T = PRI;
 const F = ULT;
 

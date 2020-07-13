@@ -3,6 +3,7 @@ const path = require('path');
 const { Observable } = require('rxjs');
 const { last } = require('lodash');
 
+
 function lerDiretorio(caminho) {
     return new Observable(subscriber => {
         try {

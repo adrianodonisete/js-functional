@@ -1,15 +1,15 @@
-const path = require('path')
-const fn = require('./funcoes')
-const _ = require('lodash')
-const { toArray, map, groupBy, mergeMap, reduce } = require('rxjs/operators')
+const path = require('path');
+const fn = require('./funcoes');
+const _ = require('lodash');
+const { toArray, map, groupBy, mergeMap, reduce } = require('rxjs/operators');
 
-const caminho = path.join(__dirname, '..', 'dados', 'legendas')
+const caminho = path.join(__dirname, '..', 'dados', 'legendas');
 
 const simbolos = [
     '.', '?', '-', ',', '"', '♪',
     '_', '<i>', '</i>', '\r', '[', ']',
     '(', ')', '!'
-]
+];
 
 fn.lerDiretorio(caminho)
     .pipe(
@@ -28,4 +28,4 @@ fn.lerDiretorio(caminho)
         toArray(),
         map(array => _.sortBy(array, el => -el.qtde))
     )
-    .subscribe(console.log)
+    .subscribe(console.log);
